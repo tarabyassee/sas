@@ -14,12 +14,33 @@ body {
   max-width: 960px;
 }
 
+h1 {
+  background-color: #fff;
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+#main-pg {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#main-pg p {
+  padding: 1rem;
+}
+
+table {
+  margin: 1rem;
+}
+
 table, 
 th, 
 td {
-  border: 1px solid red;
   border-collapse: collapse;
-  margin: auto;
 }
 
 th,

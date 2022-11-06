@@ -17,7 +17,7 @@
     </header>
     <nav>
       <ul>
-      <li><a href="<?= url_for('salamanders/'); ?>">Salamanders</a></li>
+        <li><a href="<?= url_for('salamanders/'); ?>">Salamanders</a></li>
       </ul>
     </nav>
 
