@@ -15,9 +15,9 @@
     <header>
       <h1><a href="<?= url_for('/'); ?>">Southern Appalachian Salamanders (SAS)</a></h1>
     </header>
-    <navigation>
+    <nav>
       <ul>
       <li><a href="<?= url_for('salamanders/'); ?>">Salamanders</a></li>
       </ul>
-    </navigation>
+    </nav>
 

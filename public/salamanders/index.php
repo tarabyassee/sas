@@ -1,4 +1,4 @@
-<?php 
+<?php require_once('../../private/initialize.php');
   /* ------------------------------------------------------------------
     
   1.)
@@ -20,7 +20,11 @@
     ------------------------------------------------------------------ */
 
 
-$salamanders = [
+$salamanders = [ 
+               ['id' => '1', 'salamanderName' => 'Red-Legged Salamander'],
+               ['id' => '2', 'salamanderName' => 'Pigeon Mountain Salamander'],
+               ['id' => '3', 'salamanderName' => 'Zigzag Salamander'],
+               ['id' => '4', 'salamanderName' => 'Slimy Salamander'],
 ];
 
 $page_title = 'Salamanders';
@@ -29,7 +33,7 @@ $page_title = 'Salamanders';
 Use require_once with the SHARED_PATH constant to reference 
 the salamander-header.php file
 ------------------------------------------------------------------ */
-
+  require_once(SHARED_PATH . '/salamander-header.php');
 ?>
 
 <h1>Salamanders</h1>
@@ -58,8 +62,8 @@ the salamander-header.php file
         
         You will need to reference the salamander id and name from the salamanders array
       ------------------------------------------------------------------>
-          <td><!-- row 1 --></td>
-    	    <td><!-- row 2 --></td>
+          <td><?php echo $salamander['id']; ?> </td>
+    	    <td><?php echo $salamander['salamanderName']; ?> </td>
           <td><a class="action" href="<?= url_for('salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
           <td><a class="action" href="">Edit</a></td>
           <td><a class="action" href="">Delete</a></td>
