@@ -9,6 +9,12 @@ $dbuser = 'sally';
 $dbpass = 'somePa55word';
 $dbname = 'salamanders';
 
+// Credentials Siteground
+//$dbhost = 'localhost';
+//$dbuser = 'sally';
+//$dbpass = 'somePa55word';
+//$dbname = 'salamanders';
+
 // 1. Create a database connection
 $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
