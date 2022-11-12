@@ -23,6 +23,11 @@ img {
   border-radius: 50%;
 }
 
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+
 #main-pg {
   align-items: center;
   display: grid;

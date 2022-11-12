@@ -1,14 +1,14 @@
 <?php
-  if(!isset($page_title)) { $page_title = 'Salamanders'; }
+  if(!isset($pageTitle)) { $pageTitle = 'Salamanders'; }
 ?>
 
 <!doctype html>
 
 <html lang="en">
   <head>
-    <title>SAS - <?php echo h($page_title); ?></title>
+    <title>SAS - <?php echo h($pageTitle); ?></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/salamanders.css'); ?>" />
+    <link rel="stylesheet" media="all" href="<?= url_for('/stylesheets/salamanders.css'); ?>" />
   </head>
 
   <body>
@@ -17,7 +17,7 @@
     </header>
     <nav>
       <ul>
-        <li><a href="<?= url_for('salamanders/'); ?>">Salamanders</a></li>
+        <li><a href="<?= url_for('salamanders/'); ?>">Check out the Salamanders!</a></li>
       </ul>
     </nav>
 

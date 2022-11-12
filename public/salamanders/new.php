@@ -1,24 +1,20 @@
-<?php require_once('../../private/initialize.php');?>
+<?php require_once('../../private/initialize.php');
 
-<?php $page_title = 'Create a Salamander'; ?>
+if (is_post_request()) {
+  $salamanderName = $_POST['salamanderName'];
+  echo "Salamander name:  $salamanderName";
+}
+?>
+
+<?php $pageTitle = 'Create a Salamander'; ?>
 <?php include(SHARED_PATH . '/salamander-header.php'); ?>
 
-<div id="content">
-
   <a class="back-link" href="<?php echo url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
-
-  <div class="subject new">
-    <h1>Create a Salamander</h1>
-    <form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
-      <dl>
-        <dt>Salamander Name</dt>
-        <dd><input type="text" name="salamanderName" value=""></dd>
-      </dl>
-        <input type="submit" value="Create Salamander">
-      </div>
-    </form>
-  </div>
-</div>
+  <h1>Create a Salamander</h1>
+  <form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
+    <label for="salamanderName">Salamander Name</label>
+    <input type="text" name="salamanderName"><br>
+    <input type="submit" value="Create Salamander">
+  </form>
 
 <?php include(SHARED_PATH . '/salamander-footer.php'); ?>
-
