@@ -39,7 +39,14 @@ nav ul {
 }
 
 table {
+  background-color: #fff;
+  font-size: 12px;
   margin: 1rem;
+  opacity: .7;
+}
+
+table caption {
+  font-size: 24px;
 }
 
 table, 
