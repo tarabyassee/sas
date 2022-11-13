@@ -36,7 +36,7 @@ $pageTitle = 'Salamanders';
       <td><a href="<?= url_for('salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
       <td><a href="<?= url_for('salamanders/edit.php?id=' . h(u($salamander['id']))); ?>">Edit</a></td>
       <td><a href="">Delete</a></td>
-    	  </tr>
+    </tr>
     <?php } ?>
   </table>
 

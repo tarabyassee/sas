@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS salamanders;
+/*CREATE DATABASE IF NOT EXISTS salamanders;*/
 USE salamanders;
 DROP TABLE IF EXISTS salamander;
 CREATE TABLE `salamander` (
@@ -22,5 +22,5 @@ ALTER TABLE `salamander`
   ADD PRIMARY KEY (`id`);
 
 -- Create a user named sally and grant that user all privileges
-GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'somepa55word';;
-FLUSH PRIVILEGES;
+/*GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'somepa55word';;
+FLUSH PRIVILEGES;*/
