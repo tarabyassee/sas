@@ -14,7 +14,7 @@ if(is_post_request()) {
 }
 ?>
 
-<?php $pageTitle = 'Edit Salamander'; ?>
+<?php $pageTitle = 'Stub - Edit Salamander'; ?>
 <?php include(SHARED_PATH . '/salamander-header.php'); ?>
 
   <a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
