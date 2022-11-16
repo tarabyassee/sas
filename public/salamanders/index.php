@@ -1,15 +1,8 @@
 <?php require_once('../../private/initialize.php');
 
   $subject_set = find_all_salamander();
-  
-//$salamanders = [ 
-  //             ['id' => '1', 'salamanderName' => 'Red-Legged Salamander'],
-    //           ['id' => '2', 'salamanderName' => 'Pigeon Mountain Salamander'],
-      //         ['id' => '3', 'salamanderName' => 'Zigzag Salamander'],
-        //       ['id' => '4', 'salamanderName' => 'Slimy Salamander'],
-//];
 
-$pageTitle = 'Salamanders';
+  $pageTitle = 'Salamanders';
   include_once(SHARED_PATH . '/salamander-header.php');
 ?>
 
