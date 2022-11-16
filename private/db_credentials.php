@@ -6,8 +6,10 @@ define("DB_PASS", "somepa55word");
 define("DB_NAME", "salamanders");
 
 // Credentials Siteground
-//$dbhost = 'siteground';
+//$dbhost = 'localhost';
 //$dbuser = 'uzsgtnracggz5';
 //$dbpass = '$allythe$alamander';
 //$dbname = 'dbvpzgcjlbkwgm';
+
+
 ?>

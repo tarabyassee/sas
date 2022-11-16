@@ -1,8 +1,8 @@
 /*CREATE DATABASE IF NOT EXISTS salamanders;*/
-USE salamanders;
+-- USE salamanders;
 DROP TABLE IF EXISTS salamander;
 CREATE TABLE `salamander` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO-INCREMENT PRIMRY KEY,
   `name` varchar(255) NOT NULL,
   `habitat` text,
   `description` text
