@@ -2,7 +2,7 @@
 -- USE salamanders;
 DROP TABLE IF EXISTS salamander;
 CREATE TABLE `salamander` (
-  `id` int(11) NOT NULL AUTO-INCREMENT PRIMRY KEY,
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255) NOT NULL,
   `habitat` text,
   `description` text
