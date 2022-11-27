@@ -10,12 +10,20 @@ if (is_post_request()) {
 <?php include(SHARED_PATH . '/salamander-header.php'); ?>
 
   <a class="back-link" href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
-  <h1> Stub - Create a Salamander</h1>
+
 
   <form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
-    <label for="salamanderName">Salamander Name</label>
-    <input type="text" name="salamanderName"><br>
+    <label for="name">Salamander Name</label>
+    <input type="text" name="name" value=""><br>
+
+    <label for="habitat">Habitat</label>
+    <input type="textarea" name="habitat" value=""><br>
+
+    <label for="description">Description</label>
+    <input type="textarea" name="description" value=""><br>
+
     <input type="submit" value="Create Salamander">
+
   </form>
 
 <?php include(SHARED_PATH . '/salamander-footer.php'); ?>
