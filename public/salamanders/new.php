@@ -1,10 +1,4 @@
-<?php require_once('../../private/initialize.php');
-
-if (is_post_request()) {
-  $salamanderName = $_POST['salamanderName'];
-  echo "Salamander name:  $salamanderName";
-}
-?>
+<?php require_once('../../private/initialize.php');?>
 
 <?php $pageTitle = 'Create a Salamander'; ?>
 <?php include(SHARED_PATH . '/salamander-header.php'); ?>
@@ -17,10 +11,10 @@ if (is_post_request()) {
     <input type="text" name="name" value=""><br>
 
     <label for="habitat">Habitat</label>
-    <input type="textarea" name="habitat" value=""><br>
+    <input type="text" name="habitat" value=""><br>
 
     <label for="description">Description</label>
-    <input type="textarea" name="description" value=""><br>
+    <input type="text" name="description" value=""><br>
 
     <input type="submit" value="Create Salamander">
 
