@@ -10,7 +10,19 @@ $id = $_GET['id'];
 $salamander = find_salamander_by_id($id);
 
 if(is_post_request()) {
+  $sql = "DELETE FROM salamander ";
+  $sql .= "WHERE id='" . $id . "' ";
+  $sql .= "LIMIT 1";
 
+  $result = mysqli_query($db, $sql);
+
+  if($result) {
+    redirect_to(url_for('/salamanders/index.php'));
+  } else {
+    echo mysqli_error($db);
+    db_disconnect($db);
+    exit;
+  }
 }
 ?>
 
@@ -20,18 +32,12 @@ if(is_post_request()) {
 <a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
 
   <h1>Delete Salamander</h1>
+  <p>Are you sure you want to delete this salamander?</p>
+  <p><?= h($salamander['name']); ?> </p>
 
-   <form action="<?= url_for('salamanders/delete.php?id'. h(u($id))); ?>" method="post">
-    <label for="name">Salamander Name</label>
-    <input type="text" name="name" value="<?= h($salamander['name']); ?>"><br>
+   <form action="<?= url_for('salamanders/delete.php?id='. h(u($id))); ?>" method="post">
 
-    <label for="habitat">Habitat</label>
-    <input id="habitat" rows="4" cols="50" name="habitat" value="<?= h($salamander['habitat']); ?>"></input><br>
-
-    <label for="description">Description</label>
-    <input id="description" rows="4" cols="50" name="description" value="<?= h($salamander['description']); ?>"></input><br>
-
-    <input type="submit" value="Edit Salamander">
+    <input type="submit" value="Delete Salamander">
 
   </form>
 
