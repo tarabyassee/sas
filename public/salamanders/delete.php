@@ -7,29 +7,21 @@ if (!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 
-if(is_post_request()) {
-  $salamander = [];
-  $salamander['id'] = $id;
-  $salamander['name'] = $_POST['name'] ?? '';
-  $salamander['habitat'] = $_POST['habitat'] ?? '';
-  $salamander['description'] = $_POST['description'] ?? '';
+$salamander = find_salamander_by_id($id);
 
-  $result = update_salamander($salamander);
-  redirect_to(url_for('/salamanders/show.php?id=' . $id));
-  
-} else {
-  $salamander = find_salamander_by_id($id);
+if(is_post_request()) {
+
 }
 ?>
 
-<?php $page_title = 'Edit Salamander'; ?>
+<?php $page_title = 'Delete Salamander'; ?>
 <?php include(SHARED_PATH . '/salamander-header.php'); ?>
 
 <a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
 
-  <h1>Edit Salamander</h1>
+  <h1>Delete Salamander</h1>
 
-   <form action="<?= url_for('salamanders/edit.php?id='. h(u($id))); ?>" method="post">
+   <form action="<?= url_for('salamanders/delete.php?id'. h(u($id))); ?>" method="post">
     <label for="name">Salamander Name</label>
     <input type="text" name="name" value="<?= h($salamander['name']); ?>"><br>
 

@@ -62,8 +62,6 @@ function update_salamander($salamander) {
     db_disconnect($db);
     exit;
   }
-
-
 }
 
 ?>
