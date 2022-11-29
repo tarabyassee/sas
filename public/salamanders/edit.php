@@ -33,11 +33,11 @@ if(is_post_request()) {
     <label for="name">Salamander Name</label>
     <input type="text" name="name" value="<?= h($salamander['name']); ?>"><br>
 
-    <label for="habitat">Habitat</label>
-    <input id="habitat" rows="4" cols="50" name="habitat" value="<?= h($salamander['habitat']); ?>"></input><br>
+    <label for="habitat">Habitat</label><br>
+    <textarea id="habitat" name="habitat" rows="4" cols="50"> <?= h($salamander['habitat']); ?></textarea><br>
 
-    <label for="description">Description</label>
-    <input id="description" rows="4" cols="50" name="description" value="<?= h($salamander['description']); ?>"></input><br>
+    <label for="description">Description</label><br>
+    <textarea id="description" rows="4" cols="50" name="description"> <?= h($salamander['description']); ?> </textarea><br>
 
     <input type="submit" value="Edit Salamander">
 

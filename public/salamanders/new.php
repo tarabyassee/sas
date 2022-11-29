@@ -10,11 +10,11 @@
     <label for="name">Salamander Name</label>
     <input type="text" name="name" value=""><br>
 
-    <label for="habitat">Habitat</label>
-    <input type="text" name="habitat" value=""><br>
+    <label for="habitat">Habitat</label><br>
+    <textarea id="habitat" name="habitat" rows="4" cols="50"></textarea><br>
 
-    <label for="description">Description</label>
-    <input type="text" name="description" value=""><br>
+    <label for="description">Description</label><br>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
 
     <input type="submit" value="Create Salamander">
 

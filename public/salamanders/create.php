@@ -10,13 +10,13 @@ if(is_post_request()) {
 
   $result = insert_salamander($salamander);
   $new_id = mysqli_insert_id($db);
-  redirect_to(url_for('salamanders/show.php?id=' . $new_id));
+  redirect_to(url_for('/salamanders/show.php?id=' . $new_id));
 
   echo "Salamander Name: " . $name . "<br>";
   echo "Habitat: " . $habitat . "<br>";
   echo "Description: " . $description . "<br>";
 
 } else {
-  redirect_to(url_for('/salamanders/new.php'));
+  redirect_to(url_for('salamanders/new.php'));
 }
 ?>
