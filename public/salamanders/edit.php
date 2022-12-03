@@ -20,7 +20,7 @@ if(is_post_request()) {
   }
   else {
     $errors = $result;
-    var_dump($errors); exit();
+    // var_dump($errors); exit();
   }
   
 } else {
@@ -34,6 +34,7 @@ if(is_post_request()) {
 <a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
 
   <h1>Edit Salamander</h1>
+  <?= display_errors($errors); ?>
 
    <form action="<?= url_for('salamanders/edit.php?id='. h(u($id))); ?>" method="post">
     <label for="name">Salamander Name</label>
